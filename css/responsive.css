@@ -1,0 +1,415 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-menu ul>li a {
+        padding: 20px 20px 20px;
+    }
+    .header-search {
+        padding: 15px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+    .logo {
+        text-align: center;
+    }
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .mg {
+        margin: 0px 0px;
+    }
+    .menu-area-main {
+        height: 256px;
+        overflow-y: auto;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        height: 19px;
+    }
+    .category-box.women-box {
+        display: none;
+    }
+    .cart-box {
+        display: inline-block;
+        margin: 0px 30px;
+    }
+    .wish-box {
+        float: none;
+        margin: 0px 30px;
+        display: inline-block;
+    }
+    .menu-add {
+        display: none;
+    }
+    .category-box {
+        display: none;
+    }
+    .mean-container .mean-nav ul li ol {
+        padding: 0px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 10px 20px;
+        width: 94.8%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 92%;
+        padding: 1em 4%;
+    }
+    .mean-container .mean-nav ul li li li a {
+        width: 100%;
+    }
+    .header-search {
+        padding: 15px 0px;
+    }
+    #collapseFilter.d-md-block {
+        padding: 30px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 1em 4%;
+        width: 92%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 90%;
+        padding: 1em 5%;
+    }
+    .mean-container .sub-full.megamenu-categories ol li a {
+        padding: 5px 0px;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
+        width: auto;
+        border: none;
+        float: none;
+    }
+    .menu-area-main {
+        height: 290px;
+        overflow-y: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        top: 0;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    #main_slider a.carousel-control-prev {
+        margin-left: -3%;
+    }
+    #main_slider a.carousel-control-next {
+        margin-right: -3%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        padding: 15px 0px;
+    }
+    .main-menu ul>li a {
+        padding: 21px 15px 0 15px;
+    }
+    .carousel-indicators {
+        margin-left: 0.5%;
+    }
+    .text-bg h1 {
+        padding-top: 10px;
+        font-size: 50px;
+        line-height: 70px;
+        padding-bottom: 10px;
+    }
+    .text-bg a {
+        float: inherit;
+        max-width: 170px;
+    }
+    .three_box p {
+        font-size: 16px;
+    }
+    .titlepage h2 {
+        font-size: 40px;
+    }
+    .wellcome .titlepage h2 {
+        margin-right: 4px;
+        font-size: 34px;
+    }
+    .titlepage p {
+        font-size: 16px;
+    }
+    .contact .contact {
+        padding-left: 30px;
+    }
+    #main_slider a.carousel-control-next {
+        display: none;
+    }
+    #main_slider a.carousel-control-prev {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header {
+        padding: 15px 9px;
+    }
+    .main-menu ul>li a {
+        padding: 8px 8px 0 8px;
+    }
+    ul.email_call li a {
+        padding-right: 10px;
+    }
+    .carousel-indicators {
+        margin-left: 0.5%;
+    }
+    .text-bg span {
+        font-size: 40px;
+    }
+    .text-bg h1 {
+        padding-top: 0px;
+        font-size: 44px;
+        line-height: 61px;
+        padding-bottom: 18px;
+    }
+    .text-bg a {
+        margin-right: 5px;
+        padding: 10px 23px;
+        float: inherit;
+        max-width: 156px;
+    }
+    .wellcome .titlepage h2 {
+        line-height: 40px;
+        font-size: 25px;
+        margin-right: 4px;
+    }
+    .titlepage p {
+        font-size: 12px;
+    }
+    .three_box h3 {
+        font-size: 22px
+    }
+    #main_slider a.carousel-control-next {
+        display: none;
+    }
+    #main_slider a.carousel-control-prev {
+        display: none;
+    }
+    .ourwork .our p {
+        font-size: 12px;
+    }
+    #main_slider1 a.carousel-control-next {
+        top: 34%;
+    }
+    #main_slider1 a.carousel-control-next {
+        right: -14px;
+    }
+    #main_slider1 a.carousel-control-prev {
+        right: -14px;
+    }
+    .contact .contact {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .head {
+        display: none;
+    }
+    .header {
+        padding: 15px 0px;
+    }
+    .logo {
+        width: 126px;
+    }
+    .mean-container .mean-bar {
+        margin-top: 0px;
+    }
+    .text-bg a {
+        float: inherit;
+        padding: 10px 24px;
+    }
+    .titlepage h2 {
+        font-size: 35px;
+    }
+    .wellcome .titlepage h2 {
+        border: inherit;
+    }
+    .text-bg span {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .text-bg h1 {
+        font-size: 55px;
+    }
+    .carousel-indicators {
+        margin-left: 1%;
+    }
+    .wellcome .wellcome-box {
+        margin-bottom: 30px;
+    }
+    .read_more {
+        margin-top: 20px;
+    }
+    .contact .contact {
+        padding: 50px 20px;
+        display: inline-block;
+    }
+    #main_slider a.carousel-control-next {
+        display: none;
+    }
+    #main_slider a.carousel-control-prev {
+        display: none;
+    }
+    #main_slider1 a.carousel-control-next,
+    #main_slider1 a.carousel-control-prev {
+        display: none;
+    }
+    .contact .contact::after {
+        position: inherit;
+        background: inherit;
+        width: inherit;
+        height: inherit;
+    }
+    .padd_ri {
+        padding-right: 0;
+        padding-left: 0px;
+    }
+    .padding_l {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .padd_rile {
+        padding-right: 0px;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .head {
+        display: none;
+    }
+    .header {
+        padding: 20px 0px 0px 0px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 5px;
+        float: inherit;
+    }
+    .carousel-indicators {
+        margin-left: 0.3%;
+    }
+    .carousel-indicators li {
+        width: 13px;
+        height: 13px;
+    }
+    .text-bg span {
+        font-size: 27px;
+        padding-top: 25px;
+        display: block;
+        line-height: 35px;
+    }
+    .text-bg h1 {
+        font-size: 33px;
+        line-height: 40px;
+        padding-bottom: 18px;
+    }
+    #main_slider a.carousel-control-next {
+        display: none;
+    }
+    #main_slider a.carousel-control-prev {
+        display: none;
+    }
+    .text-bg a {
+        float: inherit;
+        padding: 10px 24px;
+    }
+    .wellcome .titlepage h2 {
+        border-right: inherit;
+    }
+    .titlepage h2 {
+        line-height: 40px;
+        font-size: 19px;
+    }
+    .wellcome .wellcome-box {
+        margin-bottom: 30px;
+    }
+    .read_more {
+        margin-top: 20px;
+    }
+    .pa_bottom {
+        margin-bottom: 0;
+    }
+    #main_slider1 a.carousel-control-next,
+    #main_slider1 a.carousel-control-prev {
+        display: none;
+    }
+    .contact .contact::after {
+        position: inherit;
+        background: inherit;
+        width: inherit;
+        height: inherit;
+    }
+    .review {
+        padding-top: 55px;
+        padding-bottom: 49px;
+    }
+    .contact .contact {
+        padding: 50px 20px;
+        display: inline-block;
+    }
+    .banner-main2 .carousel-caption p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .copyright p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    .padd_ri {
+        padding-right: 0;
+        padding-left: 0px;
+    }
+    .padding_l {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .padd_rile {
+        padding-right: 0px;
+        padding-left: 0;
+    }
+}
