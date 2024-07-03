@@ -9,7 +9,7 @@ RUN rm -rf /var/www/html/*
 
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/akshu20791/apachewebsite.git /var/www/html/
-
+RUN apt update 
 EXPOSE 80
 
 CMD service apache2 start && apachectl -D FOREGROUND
