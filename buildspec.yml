@@ -5,7 +5,7 @@ phases:
         runtime-versions:
             nodejs: latest
         commands:
-            - echo "installing something"
+            - echo "installing somethingg"
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
