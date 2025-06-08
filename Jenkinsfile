@@ -2,10 +2,12 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'prabhatsanu1990/prabhatnewimg8june'
+        IMAGE_NAME = 'prabhatsanu1990/prabhatnewimg9june'
         TAG = 'v1'
         FULL_IMAGE = "${IMAGE_NAME}:${TAG}"
-        CONTAINER_NAME = 'apache-web'
+        CONTAINER_NAME = 'My-apache'
+        REMOTE_USER = 'ubuntu'
+        REMOTE_HOST = '172.31.6.94'
     }
 
     stages {
@@ -26,18 +28,29 @@ pipeline {
 
         stage('Docker Login & Push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-pwd', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-pwd',
+                        passwordVariable: 'PASS',
+                        usernameVariable: 'USER'
+                    )
+                ]) {
                     sh "echo $PASS | docker login -u $USER --password-stdin"
                     sh "docker push ${FULL_IMAGE}"
                 }
             }
         }
 
-        stage('Deploy Container') {
+        stage('Remote Deploy') {
             steps {
                 script {
-                    sh "docker rm -f ${CONTAINER_NAME} || true"
-                    sh "docker run -d --name ${CONTAINER_NAME} -p 8080:80 ${FULL_IMAGE}"
+                    def removeCmd = "sudo docker rm -f ${CONTAINER_NAME} || true"
+                    def runCmd = "sudo docker run -itd --name ${CONTAINER_NAME} -p 8081:80 ${FULL_IMAGE}"
+
+                    sshagent(['sshkeypair']) {
+                        sh "ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} '${removeCmd}'"
+                        sh "ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} '${runCmd}'"
+                    }
                 }
             }
         }
