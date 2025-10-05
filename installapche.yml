@@ -1,0 +1,20 @@
+---
+- name: Install and start Apache on Ubuntu
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt package index
+      apt:
+        update_cache: yes
+
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Ensure Apache2 is running and enabled
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apachewebsite-deployment
+  labels:
+    app: apachewebsite
+spec:
+  replicas: 2   # number of pods
+  selector:
+    matchLabels:
+      app: apachewebsite
+  template:
+    metadata:
+      labels:
+        app: apachewebsite
+    spec:
+      containers:
+      - name: apachewebsite
+        image: anirudev/apachewebsite:latest
+        ports:
+        - containerPort: 80
