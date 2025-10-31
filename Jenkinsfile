@@ -2,7 +2,7 @@ pipeline {
     agent any
       environment {
         DOCKER_IMAGE = 'akshu20791/apachewebsite:latest'
-        KUBECONFIG = credentials('kubeconfig')
+      //  KUBECONFIG = credentials('kubeconfig')
     }
 
     stages {
@@ -33,10 +33,9 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG_FILE')]) {
                         sh '''
                         echo "Deploying to Kubernetes..."
-                        export KUBECONFIG=$KUBECONFIG_FILE
+                        
 
                         kubectl apply -f deployment.yml
                         kubectl apply -f service.yml
@@ -48,7 +47,7 @@ pipeline {
             }
         }
     }
-}
+
 
 
 
