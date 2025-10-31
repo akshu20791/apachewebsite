@@ -19,7 +19,7 @@ pipeline {
        stage('Docker Build & Push') {
         steps {
             script {
-                withDockerRegistry([credentialsId: 'docker', url: 'https://index.docker.io/v2/']) {
+                withDockerRegistry([credentialsId: 'docker']) {
                     sh '''
                     echo "Building Docker image..."
                     docker build --no-cache -t $DOCKER_IMAGE -f Dockerfile .
