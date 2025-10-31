@@ -32,16 +32,9 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                script {
-                        sh '''
-                        echo "Deploying to Kubernetes..."
-                        
-
-                        kubectl apply -f deployment.yml
-                        kubectl apply -f service.yml
-
-                        echo "Deployment and Service applied successfully!"
-                        '''
+                script{
+                     kubernetesDeploy (configs: 'deployment.yml' ,kubeconfigId: 'k8sconfig')
+                   
                     }
                 }
             }
