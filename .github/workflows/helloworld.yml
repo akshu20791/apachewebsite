@@ -1,8 +1,9 @@
 name: Hello world
-on: push:
+on: 
+  push:
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-     -name: hello world
-      run: echo "Hello world from github action"
+     - name: hello world
+       run: echo "Hello world from github action"
