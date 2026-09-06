@@ -13,14 +13,14 @@ $(function () {
 		$('.loader_bg').fadeToggle();
 	}, 1500);
 
-	/* JQuery Menu
+	/* JQuery Menu option
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	$(document).ready(function () {
 		$('header nav').meanmenu();
 	});
 
-	/* Tooltip
+	/* Tooltip option
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	$(document).ready(function () {
